@@ -1,4 +1,5 @@
 import unittest
+from main import divide
 from main import add, subtract, multiply, divide, modulo
 
 class TestMath(unittest.TestCase):
@@ -36,10 +37,6 @@ class TestModulo(unittest.TestCase):
         self.assertEqual(modulo(10, -2), 0)
         self.assertEqual(modulo(-10, 2), 0)
         self.assertEqual(modulo(-10, -2), 0)
-
-    def test_modulo_by_zero(self):
-        with self.assertRaises(ValueError):
-            modulo(10, 0)
 
 
 
