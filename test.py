@@ -1,13 +1,19 @@
 import unittest
-from main import check
+from main import divide
 
-class TestCheck(unittest.TestCase):
-    def test_check(self):
-        self.assertTrue(not check(1))
-        self.assertTrue(check(2))
-        self.assertTrue(not check(3))
-        self.assertFalse(check(221))
-        self.assertFalse(not check(220))
+class TestDivide(unittest.TestCase):
+    def test_divide(self):
+        self.assertEqual(divide(10, 2), 5)
+        self.assertEqual(divide(10, -2), -5)
+        self.assertEqual(divide(-10, 2), -5)
+        self.assertEqual(divide(-10, -2), 5)
+
+
+    def test_divide_by_zero(self):
+        with self.assertRaises(ValueError):
+            divide(10, 0)
+
+
 
 if __name__ == '__main__':
     unittest.main()
