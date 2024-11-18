@@ -6,7 +6,7 @@ class TestCheck(unittest.TestCase):
         self.assertTrue(not check(1))
         self.assertTrue(check(2))
         self.assertTrue(not check(3))
-        self.assertFalse(check(221))
+        self.assertFalse(check(220))
         self.assertFalse(not check(220))
 
 if __name__ == '__main__':
